@@ -1,0 +1,6 @@
+<ul class="list-group" *ngIf="typesPfe">
+  <li class="list-group-item" [ngClass]="currentType === 'tous' ? 'active':''">Tous Les Catégories</li>
+  <li class="list-group-item" (click)="onChange(type)" [ngClass]="currentType === type ? 'active':''"
+    *ngFor="let type of typesPfe._embedded.typePfes">{{ type.libelle }}&nbsp;<span
+      class="badge badge-primary">{{ type.nbrPfes }}</span></li>
+</ul>

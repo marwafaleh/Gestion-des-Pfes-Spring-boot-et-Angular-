@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header bg-primary text-center text-white">Ajout d'un nouveau PFE</div>
+  <div class="card-body">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="">Titre:</label>
+        <input type="text" name="titre" [(ngModel)]="nvPfe.titre" placeholder="Titre de PFE" class="form-control mb-2">
+      </div>
+      <div class="form-group">
+        <label for="">Séléctionner Type:</label>
+        <select name="typePfe" id="" class="form-control" [(ngModel)]="nvPfe.typePfe">
+          <option value="{{ t._links.self.href }}" *ngFor="let t of typePfes._embedded.typePfes">{{ t.libelle }}</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-outline-primary btn-block btn-sm">Enregistrer</button>
+    </form>
+
+  </div>
+</div>

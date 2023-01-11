@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-header text-white bg-warning text-center">Modification d'un pfe</div>
+  <div class="card-body">
+    <form (ngSubmit)="onUpdate()">
+      <div class="form-group">
+        <label for="">Titre</label>
+        <input type="text" placeholder="Titre de PFE" name="titre" [(ngModel)]="pfe.titre" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-outline-warning btn-block btn-sm">Mis à jour</button>
+    </form>
+
+  </div>
+</div>
